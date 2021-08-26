@@ -3,17 +3,13 @@ import './Component.css';
 
 const Header = (props) => {
 
-    const showAlert = () => {
-        alert("hi")
-    }
     return (
         <div>
             <div className="navbar" >
-                <h1 className="logo-h1">Name</h1>
-                <div className="menu-div">
-                    <p className="add" onClick={showAlert}>Add</p>
+                <h1 className="logo-h1">Todo App</h1>
+                {/* <div className="menu-div">
                     <p className="menu">Menu</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -1,34 +1,42 @@
 import { useState } from "react";
+// import uuid from 'react-uuid';
 import "./App.css";
 import Header from "./components/Header";
 import AddTodo from "./components/AddTodo";
+import Form from "./components/Form";
+
 
 function App(props) {
-  const [todo, setTodo] = useState({
-    value: "input.value",
-    id: 1,
-  });
+  const [input, setInput] = useState("");
+  const [todo, setTodo] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    setTodo([
+      ...todo,
+      { text: input, id: Math.floor(Math.random() * 10000), completed: false },
+    ]);
+    setInput("");
   };
 
-  // const handleChange =(e) => {
-  //   console.log(e.target.value)
-  // }
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
 
   return (
     <div className="App">
       <Header />
-      <form className="addtodo-form" onSubmit={handleSubmit}>
-        <input type="text" name="text" className="input" onChange={props.submit} />
-        <button type="submit" className="button">
-          Add Todo
-        </button>
-      </form>
-      <p>{todo.value}</p>
-      <AddTodo />
+      <Form
+        input={input}
+        handlesubmit={handleSubmit}
+        setInput={setInput}
+        handlechange={handleChange}
+        todo={todo}
+        setTodo={setTodo}
+      />
+      <div className="main-div">
+      <AddTodo todo={todo} setTodo={setTodo} />
+      </div>
     </div>
   );
 }
