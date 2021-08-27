@@ -6,7 +6,9 @@
 }
 
 .App {
+  background-image: url(protruding-squares.svg);
   border: 1px solid;
+  color: white;
  width: 95%;
  margin: 20px auto;
  height: 95vh;

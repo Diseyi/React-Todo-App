@@ -12,6 +12,7 @@ function App(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setTodo([
       ...todo,
       { text: input, id: Math.floor(Math.random() * 10000), completed: false },
