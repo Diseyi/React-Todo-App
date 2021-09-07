@@ -6,9 +6,7 @@
 }
 
 .App {
-  background-image: url(protruding-squares.svg);
-  border: 1px solid;
-  color: white;
+  background-color:#a5bfd0;
  width: 95%;
  margin: 20px auto;
  height: 95vh;
@@ -23,7 +21,14 @@
 
 @media only screen and (min-width: 600px) {
 .App {
-  width: 50%;
+  width: 70%;
   margin: 20px auto;
 }
 }
+
+@media only screen and (min-width: 960px) {
+  .App {
+    width: 50%;
+    margin: 20px auto;
+  }
+  }

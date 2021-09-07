@@ -24,11 +24,14 @@
       padding: 10px;
   }
   .input {
-      width: 70%;
+      width: 80%;
   }
 
   .button {
-      width: 30%;
+      width: 20%;
+      background-color: #003049;
+      color: #fff;
+
   }
 
   .todo {
@@ -46,10 +49,17 @@
       width: 90%;
   }
 
+  .edit-button {
+    background-color: #fef0d5;
+    border: 1px solid ;
+      font-size: 16px;
+      padding: 2px 4px;
+  }
+
   .delete-button {
       background-color: red;
+      border: none;
       color: white;
       font-size: 16px;
-      border: 1px solid black;
       padding: 2px;
   }
