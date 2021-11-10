@@ -8,7 +8,11 @@ const AddTodo = ({todo, setTodo}) => {
         <div>
            <ul className="list-container" > 
            {todo.map(todos => (
-               <Todo text={todos.text} todo={todo} setTodo={setTodo} todos={todos} />
+               <Todo 
+               text={todos.text} 
+               todo={todo} 
+               setTodo={setTodo} 
+               todos={todos} />
            ))}
            </ul>
         </div>

@@ -1,5 +1,4 @@
-import { useState } from "react";
-// import uuid from 'react-uuid';
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import AddTodo from "./components/AddTodo";
@@ -24,9 +23,14 @@ function App(props) {
     setInput(e.target.value);
   };
 
+  useEffect(() => {
+    console.log('you just rendered the component')
+  }, [todo]);
+
   return (
     <div className="App">
       <Header />
+      
       <Form
         input={input}
         handlesubmit={handleSubmit}
