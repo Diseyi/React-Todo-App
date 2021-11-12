@@ -11,12 +11,15 @@ function App(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (input !== ""){
 
-    setTodo([
-      ...todo,
-      { text: input, id: Math.floor(Math.random() * 10000), completed: false },
-    ]);
-    setInput("");
+      setTodo([
+        ...todo,
+        { text: input, id: Math.floor(Math.random() * 10000), completed: false },
+      ]);
+      setInput("");
+    }
   };
 
   const handleChange = (e) => {
