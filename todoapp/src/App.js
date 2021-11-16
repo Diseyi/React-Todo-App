@@ -12,7 +12,7 @@ function App(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (input !== ""){
+    if (input.trim().length !== 0){
 
       setTodo([
         ...todo,

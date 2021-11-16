@@ -12,7 +12,8 @@ const AddTodo = ({todo, setTodo}) => {
                text={todos.text} 
                todo={todo} 
                setTodo={setTodo} 
-               todos={todos} />
+               todos={todos} 
+               key={todos.id}/>
            ))}
            </ul>
         </div>
